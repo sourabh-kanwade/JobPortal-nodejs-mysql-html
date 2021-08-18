@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/editProfile.css" />
+        <script src="./scripts/addUserDetails.js"></script>
+        <title>Apply Remote | User Details</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <div class="message-container">
+            <div class="message"></div>
+        </div>
+        <div class="container">
+            <div class="heading">Tell Us About <span>Yourself</span></div>
+            <form class="main-form-container" onsubmit="userFormHandler(event)" enctype="multipart/form-data">
+                <div class="description">
+                    <h4>About</h4>
+                    <p>Tell us about yourself so companies know who you are</p>
+                </div>
+                <div class="form-container">
+                    <div class="form-item">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="e.g. Jon Walker" required />
+                    </div>
+                    <div class="user-image-upload">
+                        <div class="user-image-container">
+                            <img src="./images/user_icon.svg" alt="user_icon" id="user-image" />
+                        </div>
+                        <input
+                            type="file"
+                            name="userImage"
+                            class="custom-file-input custom-image-upload"
+                            accept="image/*"
+                            onchange="userImageUploadHandler(event)"
+                            required
+                        />
+                    </div>
+                    <div class="form-item">
+                        <label for="location">Where are you based ?</label>
+                        <input type="text" name="location" id="location" placeholder="e.g. Mumbai , Maharashtra" required />
+                    </div>
+                    <div class="sideByside">
+                        <div class="form-item">
+                            <label for="website">Website</label>
+                            <input type="url" name="website" placeholder=" e.g. https://example.com" required />
+                        </div>
+                        <div class="form-item">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" name="phoneNumber" placeholder="2323232332" required />
+                        </div>
+                    </div>
+                    <div class="sideByside">
+                        <div class="form-item">
+                            <label for="role">Select Your Role</label>
+                            <select name="role" id="role">
+                                <option value="default">Select Your Role</option>
+                                <option value="UI Designer">UI-UX Designer</option>
+                                <option value="Researcher">Researcher</option>
+                                <option value="Developer">Developer</option>
+                                <option value="Security">Security</option>
+                                <option value="Game Developer">Game Developer</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label for="exp">Years of Experience</label>
+                            <select name="exp" id="exp">
+                                <option value="default">Select your experience</option>
+                                <option value="1">1 Year</option>
+                                <option value="2">2 Years</option>
+                                <option value="3">3 Years</option>
+                                <option value="4">4 Years</option>
+                                <option value="5">5 Years</option>
+                                <option value="6">6 Years</option>
+                                <option value="7">7 Years</option>
+                                <option value="8">8 Years</option>
+                                <option value="9">9 Years</option>
+                                <option value="10">10+ Years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="highestQualification">Highest Qualification</label>
+                        <input type="text" name="highestQualification" placeholder="e.g. B.TECH " required />
+                    </div>
+                    <div class="form-item">
+                        <label for="bio">Your Bio</label>
+                        <textarea name="bio" rows="7" placeholder="Stanford CS, Worked at Google,launched a successful android app .." required></textarea>
+                    </div>
+                </div>
+                <hr />
+                <div class="description">
+                    <h4>Your Skills</h4>
+                    <p>Tell us about your skills</p>
+                </div>
+                <div class="form-container">
+                    <div class="form-item">
+                        <input type="text" name="skills" id="skills" placeholder="e.g. Python , Java , React" required />
+                    </div>
+                </div>
+                <hr />
+                <div class="description">
+                    <h4>Resume</h4>
+                    <p>Upload your most up-to-date resume</p>
+                    <p>File types: PDF, DOCX, PPTX</p>
+                </div>
+                <div class="form-container resume-container">
+                    <img src="./images/file-pdf.svg" alt="" width="50px" />
+                    <input type="file" name="resume" id="resume" class="custom-file-input file-resume" accept=".pdf ,.docx,.pptx" required />
+                </div>
+                <button class="btn btn-primary">Save</button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

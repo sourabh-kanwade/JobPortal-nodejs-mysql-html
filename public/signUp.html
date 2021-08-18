@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/signIn.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/signUp.js"></script>
+        <title>Apply Remote | Sign Up</title>
+    </head>
+    <body>
+        <div id="popUp">
+            <h1 class="heading">Who Are You <span>?</span></h1>
+            <div>
+                <button class="btn btn-primary" onclick="jobSeekerHandler()">Job Seeker</button>
+                <button class="btn btn-primary" onclick="jobProviderHandler()">Job Provider</button>
+            </div>
+        </div>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <div class="container">
+            <form class="auth-form" onsubmit="onSubmitHandler(event)">
+                <div class="heading"><span>Let’s Get Your</span><br />Account Set Up!</div>
+                <div id="error"></div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="e.g.example@mail.com" oninput="onInputHandler()" />
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" pattern="[a-zA-Z0-9!@#$%^&*]{6,16}$" oninput="onInputHandler()" />
+                <label for="cpass">Confirm Password</label>
+                <input type="password" name="cpass" id="cpass" placeholder="Confirm Password" pattern="[a-zA-Z0-9!@#$%^&*]{6,16}$" oninput="onInputHandler()" />
+                <button class="btn btn-primary">Sign Up</button>
+                <p>Already have an account ? <a href="./signIn.html">Sign In</a></p>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

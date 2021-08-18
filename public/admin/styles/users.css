@@ -1,0 +1,38 @@
+.users-card-container {
+    flex-wrap: wrap;
+}
+.user-card {
+    position: relative;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 1.5rem;
+    width: 20%;
+}
+.user-card-img {
+    width: 130px;
+    aspect-ratio: 1;
+}
+.delete-user {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 25px;
+}
+.btn-name {
+    background: #545454;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #3db0f0;
+    border: none;
+    padding: 10px 30px;
+    margin: 15px 0;
+}
+/* add btn */
+.addUserBtn {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+}

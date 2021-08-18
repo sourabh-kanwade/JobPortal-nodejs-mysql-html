@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/brand.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/settings.css" />
+        <link rel="stylesheet" href="./styles/addUser.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <script src="./scripts/addUser.js"></script>
+        <title>Add User | Admin</title>
+    </head>
+    <body>
+        <!-- Settings -->
+        <div class="settings">
+            <div><a href="./profile.html">Profile</a></div>
+            <div onclick="logout()">Logout</div>
+        </div>
+        <!--Top Navbar -->
+        <nav class="top-nav d-flex justify-between">
+            <a href="./index.html">ApplyRemote<sup>Admin</sup></a>
+            <div id="menu-button"><img src="./images/hamburger.svg" alt="menu" width="30px" /></div>
+            <div class="search-container d-flex align-center">
+                <img src="./images/search.svg" alt="search" />
+                <input type="search" placeholder="Full Name or Designation" onkeyup="searchHandler(event)" />
+            </div>
+            <div class="nav-right d-flex align-center">
+                <div class="setting-img-container d-flex flex-center">
+                    <img src="./images/setting.svg" alt="settings" onclick="loadOptions()" id="setting-icon" />
+                </div>
+                <div class="user-img-container">
+                    <img src="./images/user_icon.svg" alt="user_icon" />
+                </div>
+                <h2 id="username"></h2>
+            </div>
+        </nav>
+        <div class="main-container d-flex">
+            <!-- Side Navbar -->
+            <nav class="side-nav">
+                <a href="./index.html"><img src="./images/home.svg" alt="Home" /><span class="link-title"> Dashboard</span></a>
+                <a href="./users.html" class="active"><img src="./images/users-group.svg" alt="users" /><span class="link-title"> Users</span></a>
+                <a href="./jobs.html"> <img src="./images/job.svg" alt="jobs" /><span class="link-title"> Jobs</span></a>
+                <a href="./companies.html"><img src="./images/company.svg" alt="companies" /><span class="link-title"> Companies</span></a>
+                <a href="./newsLetter.html"><img src="./images/news.svg" alt="news" /><span class="link-title"> Newsletter</span></a>
+            </nav>
+            <!-- Content -->
+            <div class="container spilt-container">
+                <!-- Error -->
+                <div class="error-container">
+                    <div class="error-message">Something Went Wrong</div>
+                    <img src="./images//circle_cross_icon.png" alt="close" width="25" onclick="errorCloseHandler()" />
+                </div>
+                <!-- Success  -->
+                <div class="success-container">
+                    <div class="success-message">Successfully Updated</div>
+                </div>
+                <h1>Add User</h1>
+
+                <form class="userForm" id="user-form">
+                    <label for="full_name">Name</label>
+                    <input type="text" name="full_name" required />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="e.g example@mail.com" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" />
+                    <label for="password">Password</label>
+                    <input type="password" name="userPassword" placeholder="Password" required />
+                    <label for="isJobProvider">Type Of User</label>
+                    <div class="d-flex align-center">
+                        <input type="radio" name="isJobProvider" value="1" onclick="handleRadioClick(this.value)" required />
+                        <label>Job Provider</label>
+                        <input type="radio" name="isJobProvider" value="0" onclick="handleRadioClick(this.value)" required />
+                        <label>Job Seeker</label>
+                    </div>
+                </form>
+                <form class="userForm" id="userDetailForm" enctype="multipart/form-data">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" name="companyName" placeholder="e.g YouTube" required />
+                    <label for="companyLogo">Company Logo</label>
+                    <div class="user-image-upload d-flex align-center">
+                        <div class="user-image-container d-flex flex-center">
+                            <img src="./images/user_icon.svg" alt="user_icon" id="user-image" width="45" />
+                        </div>
+                        <input
+                            type="file"
+                            name="userImage"
+                            class="custom-file-input custom-image-upload"
+                            accept="image/*"
+                            onchange="userImageUploadHandler(event)"
+                            required
+                        />
+                    </div>
+                    <label for="companyLocation">Where are you based?</label>
+                    <input type="text" name="companyLocation" placeholder="e.g. Pune , Maharashtra" required />
+                    <label for="website">Website</label>
+                    <input type="url" name="website" placeholder="e.g. https://example.com" required />
+                    <label for="info">What your company do ?</label>
+                    <textarea name="info" rows="5" placeholder="About your company ..." required></textarea>
+                </form>
+                <button onclick="handleSave()" id="saveButton" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="d-flex align-center">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text d-flex justify-between">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text d-flex">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

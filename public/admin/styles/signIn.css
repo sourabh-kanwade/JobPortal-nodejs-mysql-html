@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: #0c0c0c;
+    --primary-color: #3db0f0;
+    --primary-dark-color: #0ea2f1;
+    --secondary-color: #3a3a3a;
+    --font-color: rgb(245, 245, 245);
+}
+body {
+    font-size: 20px;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 5% 20%;
+}
+.img-container {
+    display: flex;
+    flex: 1;
+    background-image: url("../images/jake-hills.jpg");
+    background-size: 100% 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px var(--secondary-color);
+}
+.content {
+    width: 50%;
+    padding: 2rem 4rem;
+    background-color: var(--secondary-color);
+    border-radius: 20px 0 0 20px;
+}
+nav > a {
+    text-decoration: none;
+    color: var(--font-color);
+    margin-right: 1rem;
+    display: inline-block;
+    padding: 0.3rem 0.3rem;
+}
+nav > a.active {
+    border-bottom: 3px solid var(--primary-color);
+}
+h1 {
+    margin-top: 5rem;
+}
+p {
+    margin: 1rem 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    background-color: rgba(110, 110, 110, 50%);
+    margin: 0.5rem 0;
+    border-radius: 2px;
+}
+.form-group > label {
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    color: rgba(202, 202, 202, 0.904);
+}
+.form-group > input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--font-color);
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+}
+
+.form-group:focus-within {
+    border-left: 3px solid var(--primary-color);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.signInBtn {
+    cursor: pointer;
+    width: 40%;
+    border: none;
+    outline: none;
+    margin: 1rem 0;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 12px 0px var(--primary-color);
+}
+.signInBtn:hover {
+    background-color: var(--primary-dark-color);
+}
+small > a {
+    text-decoration: none;
+    color: var(--font-color);
+    text-decoration: underline;
+}

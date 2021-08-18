@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/editProfile.css" />
+        <style>
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .main-form-container {
+                margin: 0 auto;
+                width: 40%;
+            }
+        </style>
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <script src="./scripts/settings.js"></script>
+        <title>Apply Remote | Home</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html" class="active-link">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <div class="message-container">
+            <div class="message"></div>
+        </div>
+        <div class="container">
+            <div class="title">Apply<span class="color-primary">Remote</span> Settings</div>
+            <form class="main-form-container" method="POST" onsubmit="onFormSubmitHandler(event)">
+                <label for="name">Name</label>
+                <input type="text" name="name" />
+                <label for="email">Email</label>
+                <input type="email" name="email" />
+
+                <hr />
+                <button class="btn btn-primary">Save</button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/jobDetails.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/jobDeails.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <title>Apply Remote | Job Details</title>
+    </head>
+    <body>
+        <div id="pop-info">
+            <h2 id="message">Message</h2>
+            <img src="./images/delete_cross.svg" onclick="popCloseHandler()" />
+        </div>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="./index.html" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <div class="container">
+            <div class="heading">Discover The <span>Best Remote Jobs</span></div>
+            <div class="job-card-container"></div>
+            <!-- / -->
+            <div class="spilt-container">
+                <div class="big-container">
+                    <div class="title color-primary">Company Overview</div>
+                    <p id="company-overview"></p>
+                    <div class="title color-primary">Role Overview</div>
+                    <p id="role-overview"></p>
+                    <div class="title">Format that what you’ll be working on</div>
+                    <p id="work-format"></p>
+                    <div class="title">What we would like to see in our ideal candidate :</div>
+                    <p id="keypoints"></p>
+                </div>
+                <div class="small-container"></div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

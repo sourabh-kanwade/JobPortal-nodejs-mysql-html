@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/companies.css" />
+        <style>
+            a[href="./companies.html"] {
+                border-bottom: 2px solid var(--primary-color);
+            }
+        </style>
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/companies.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <title>Apply Remote | Companies</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left">
+                <a href="./jobs.html">Jobs</a>
+                <a href="./companies.html" class="active-link">Companies</a>
+            </div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <div class="container">
+            <div class="heading">Explore Amazing <span>Remote Companies</span></div>
+            <!-- Search bar -->
+            <form class="searchBar-container" onsubmit="onSearchSubmitHandler(event)">
+                <img src="./images/search.svg" alt="search-icon" />
+                <input type="search" placeholder="Search For Company Name" name="companyName" required />
+                <button class="btn">Search</button>
+            </form>
+            <!-- Companies -->
+            <div class="title">Companies</div>
+            <div class="companies-container"></div>
+            <button class="btn btn-primary load-more" onclick="moreCompaniesHandler()">See More Companies</button>
+            <!-- Featured Companies -->
+            <div class="featured-companies-container">
+                <div class="title">Featured Companies</div>
+                <div class="sub-heading">
+                    Amazing companies are looking for great talent. <br />
+                    Apply now to start working from anywhere.
+                </div>
+                <div class="logo-container">
+                    <img src="./images/airbnb_text.svg" alt="company-logo" />
+                    <img src="./images/amazon_logo_text.svg" alt="company-logo" />
+                    <img src="./images/google_logo_name_color.svg" alt="company-logo" />
+                    <img src="./images/microsoft_logo_text.svg" alt="company-logo" />
+                    <img src="./images/fitbit_logo_text.svg" alt="company-logo" />
+                    <img src="./images/logo-github_text.svg" alt="company-logo" style="height: 5rem; margin-top: 4rem" />
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

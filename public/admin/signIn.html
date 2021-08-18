@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/brand.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="./styles/signIn.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/signIn.js"></script>
+        <title>Admin | SignIn</title>
+    </head>
+    <body>
+        <div class="img-container">
+            <div class="content">
+                <nav>
+                    <a href="#" class="active">Sign In</a>
+                    <a href="./signUp.html">Sign Up</a>
+                </nav>
+                <h1>Welcome</h1>
+                <p>Let's Login</p>
+                <!-- Error -->
+                <div class="error-container">
+                    <div class="error-message">Something Went Wrong</div>
+                    <img src="./images//circle_cross_icon.png" alt="close" width="25" onclick="errorCloseHandler()" />
+                </div>
+                <form onsubmit="formSubmitHandler(event)">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="e.g example@mail.com" required oninput="errorCloseHandler()" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Password" required oninput="errorCloseHandler()" />
+                    </div>
+                    <small>forgot password ?</small>
+                    <button class="signInBtn">Sign In</button>
+                    <small>Don't have an account ? <a href="./signUp.html">Sign Up</a></small>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

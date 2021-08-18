@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/postJob.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <script src="./scripts/editCompanyDetails.js"></script>
+        <title>Apply Remote | Home</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <div class="message-container">
+            <div class="message"></div>
+        </div>
+        <div class="container">
+            <div class="heading">Recruit Top <span>Quality People</span> Around The World</div>
+            <div class="title">Edit Company Details</div>
+
+            <form class="postJobForm" method="POST" onsubmit="formSubmitHandler(event)" enctype="multipart/form-data">
+                <label for="companyName">Company Name</label>
+                <input type="text" name="companyName" placeholder="e.g YouTube" />
+                <label for="companyLogo">Company Logo</label>
+                <div class="user-image-upload">
+                    <div class="user-image-container">
+                        <img src="./images/user_icon.svg" alt="user_icon" id="user-image" />
+                    </div>
+                    <input
+                        type="file"
+                        name="userImage"
+                        class="custom-file-input custom-image-upload"
+                        accept="image/*"
+                        onchange="userImageUploadHandler(event)"
+                    />
+                </div>
+                <label for="companyLocation">Where are you based?</label>
+                <input type="text" name="companyLocation" placeholder="e.g. Pune , Maharashtra" />
+                <label for="website">Website</label>
+                <input type="url" name="website" placeholder="e.g. https://example.com" />
+                <label for="info">What your company do ?</label>
+                <textarea name="info" rows="5" placeholder="About you company ..."></textarea>
+                <button class="btn btn-primary">Save</button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

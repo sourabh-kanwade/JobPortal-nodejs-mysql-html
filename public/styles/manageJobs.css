@@ -1,0 +1,8 @@
+@import "jobApplications.css";
+.applications-header,
+.applications {
+    grid-template-columns: 1fr 4fr 3fr 2fr 1fr;
+}
+a[href="./manageJobs.html"] {
+    border-bottom: 2px solid var(--primary-color);
+}

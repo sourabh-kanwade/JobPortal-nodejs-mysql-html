@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/postJob.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <script src="./scripts/postJob.js"></script>
+        <title>Apply Remote | Job Post</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <div class="message-container">
+            <div class="message"></div>
+        </div>
+        <div class="container">
+            <div class="heading">Recruit Top <span>Quality People</span> Around The World</div>
+            <div class="title">Let’s Create a Job Posting</div>
+            <form class="postJobForm" onsubmit="onFormSubmitHandler(event)" method="POST">
+                <label for="jobRole">Job Role</label>
+                <input type="text" name="jobRole" placeholder="Role of Job" />
+                <label for="category">Select Category</label>
+                <select name="category">
+                    <option value="default">Select Job Category</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                    <option value="research">Research</option>
+                    <option value="security">Security</option>
+                    <option value="gaming">Gaming</option>
+                </select>
+                <label for="jobType">Job Type</label>
+                <div>
+                    <input type="radio" name="jobType" value="Fulltime" />
+                    <label for="jobType">Full Time</label>
+                    <input type="radio" name="jobType" value="Freelance" />
+                    <label for="jobType">Freelance</label>
+                    <input type="radio" name="jobType" value="Remote" />
+                    <label for="jobType">Remote</label>
+                </div>
+                <label for="jobLocation">Job Location</label>
+                <input type="text" name="jobLocation" placeholder="Location for Job" />
+                <label>Dates</label>
+                <div class="datesContainer">
+                    <div>
+                        <label for="startDate">Start Date</label>
+                        <input type="date" name="startDate" />
+                    </div>
+                    <div>
+                        <label for="endDate">End Date</label>
+                        <input type="date" name="endDate" />
+                    </div>
+                </div>
+                <label for="roleOverview">Role Overview</label>
+                <textarea name="roleOverview" cols="30" rows="5" placeholder="Role Overview"></textarea>
+                <label for="workingFormat">Working Format</label>
+                <textarea name="workingFormat" cols="30" rows="5" placeholder="Working Format"></textarea>
+                <label for="keyPoints">Keypoints for Candidate</label>
+                <textarea name="keyPoints" cols="30" rows="5" placeholder="KeyPoints for Candidates"></textarea>
+                <label for="tags">Add Tags</label>
+                <input type="text" name="tags" placeholder="e.g. react , angular" />
+                <button class="btn btn-primary">Post Job</button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

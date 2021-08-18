@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/index.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <title>Apply Remote | Home</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html" class="active-link">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <!-- Account Options -->
+        <div class="account-options"></div>
+        <!-- error success -->
+        <div class="message-container">
+            <div class="message"></div>
+        </div>
+        <div class="container">
+            <div class="heading">
+                Find <span>Remote</span>
+                <br />
+                Job In <span>Worldwide</span>
+            </div>
+            <p class="sub-heading">Work remotely to companies in worldwide</p>
+            <!-- Search bar -->
+            <form class="searchBar-container" onsubmit="onSearchSubmitHandler(event)">
+                <img src="./images/search.svg" alt="search-icon" />
+                <input type="search" placeholder="Search For Job Title" name="jobTitle" required />
+                <input type="search" placeholder="e.g. React , Angular" name="tag" required />
+                <input type="search" placeholder="e.g. San Francisco" name="location" required />
+                <button class="btn">Search</button>
+            </form>
+            <!-- Category -->
+            <div class="title">Categories</div>
+            <div class="categories-container">
+                <div class="category-card" onclick="categoryClickHandler('design',this)">
+                    <img src="./images/design.svg" alt="design" class="category-img" />
+                    <h2 class="category-title">Design</h2>
+                </div>
+                <div class="category-card" onclick="categoryClickHandler('research',this)">
+                    <img src="./images/research.svg" alt="research" class="category-img" />
+                    <h2 class="category-title">Research</h2>
+                </div>
+                <div class="category-card" onclick="categoryClickHandler('development',this)">
+                    <img src="./images/devlopment.svg" alt="development" class="category-img" />
+                    <h2 class="category-title">Development</h2>
+                </div>
+                <div class="category-card" onclick="categoryClickHandler('security',this)">
+                    <img src="./images/sequrity.svg" alt="security" class="category-img" />
+                    <h2 class="category-title">Security</h2>
+                </div>
+                <div class="category-card" onclick="categoryClickHandler('gaming',this)">
+                    <img src="./images/gaming.svg" alt="gaming" class="category-img" />
+                    <h2 class="category-title">Gaming</h2>
+                </div>
+            </div>
+            <div class="title">Featured Jobs</div>
+            <div id="featured-jobs-container"></div>
+            <button class="btn btn-primary load-more" onclick="loadMoreHandler()">Load More</button>
+            <div class="heading">
+                <span>World Top Company </span>Post <br />
+                Their Job In Here
+            </div>
+            <div class="sub-heading">
+                It aims to bring job posting to people looking for jobs remotly from all over <br />
+                the world by offering high quality services to companies that prefer us
+            </div>
+            <a href="./signIn.html" class="btn btn-primary" style="display: inline-block; text-decoration: none"> Get Started</a>
+            <!-- Featured Companies -->
+            <div class="featured-companies-container">
+                <div class="title">Featured Companies</div>
+                <div class="sub-heading">
+                    Amazing companies are looking for great talent. <br />
+                    Apply now to start working from anywhere.
+                </div>
+                <div class="logo-container">
+                    <img src="./images/airbnb_text.svg" alt="company-logo" />
+                    <img src="./images/amazon_logo_text.svg" alt="company-logo" />
+                    <img src="./images/google_logo_name_color.svg" alt="company-logo" />
+                    <img src="./images/microsoft_logo_text.svg" alt="company-logo" />
+                    <img src="./images/fitbit_logo_text.svg" alt="company-logo" />
+                    <img src="./images/logo-github_text.svg" alt="company-logo" style="height: 5rem; margin-top: 4rem" />
+                </div>
+            </div>
+            <!-- Subscribe & Newsletter -->
+            <div class="newsletter-container">
+                <div class="newsletter-title">
+                    Subscribe <span> Newsletter</span> & get <br />
+                    Company News
+                </div>
+                <div class="newsletter-inp-container">
+                    <input type="email" placeholder="Email address" id="subscriptionEmail" />
+                    <button class="btn btn-primary" onclick="subscriptionHandler()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

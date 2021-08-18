@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/signIn.css" />
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/signIn.js"></script>
+        <title>Apply Remote | Sign In</title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <div class="nav">
+            <a href="" id="brand">
+                <h1>
+                    <img src="./images/brand.svg" alt="Brand" id="brand-logo" />
+                    Apply<span>Remote</span>
+                </h1>
+            </a>
+            <a href="./index.html">Home</a>
+            <div class="nav-left"></div>
+            <div class="nav-right"></div>
+        </div>
+        <div class="container">
+            <form class="auth-form" method="POST" onsubmit="onSubmitHandler(event)">
+                <div class="heading"><span>Hello Again!</span><br />Welcome Back!</div>
+                <div id="error"></div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="e.g.example@mail.com" required oninput="onInputHandler()" />
+                <label for="password">Password</label>
+                <input
+                    oninput="onInputHandler()"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                    pattern="[a-zA-Z0-9!@#$%^&*]{6,16}$"
+                    title="Password must contain at least 6 characters, including UPPER/lowercase and numbers and special characters"
+                />
+                <p><a href="">Forgot password ?</a></p>
+                <button class="btn btn-primary">Sign In</button>
+                <p>Don’t have an account yet ? <a href="./signUp.html">Sign Up</a></p>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="./images/brand.svg" alt="brand-logo" />
+                        ApplyRemote
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/logo-twitter.svg" alt="socials" />
+                        <img src="./images/logo-linkedin.svg" alt="socials" />
+                        <img src="./images/logo-facebook.svg" alt="socials" />
+                    </div>
+                </div>
+                <hr />
+                <div class="footer-text">
+                    <div>Copyright&copy; ApplyRemote by Sourabh</div>
+                    <div class="right-text">
+                        <div>Privacy Policy</div>
+                        <div>Terms of Service</div>
+                        <div>Security & service</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

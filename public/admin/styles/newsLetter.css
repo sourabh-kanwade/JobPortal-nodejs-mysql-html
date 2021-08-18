@@ -1,0 +1,22 @@
+.newsletter-header {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr auto;
+    align-items: center;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+.newsletter-row {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr auto;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    border: 1px solid var(--primary-color);
+    background-color: #323232;
+}
